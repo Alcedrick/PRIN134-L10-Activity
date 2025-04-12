@@ -7,7 +7,9 @@
     <title>PRIN134-L10-Activity</title>
 </head>
 <body>
-    <div id="myDIV" class="header">
+    <div class="container">
+      <div class="left-column">
+        <div id="myDIV" class="header">
         <h2>Basketball Game</h2>
         <input type="text" id="myInput" placeholder="Player Name...">
         <span onclick="newElement()" class="addBtn">Add Player</span>
@@ -16,11 +18,14 @@
       
       <ul id="myUL">
         
-      </ul>
-    
-    <div id="gameResults" class="results-container">
-        <h3>Game Results</h3>
-        <div id="resultsContent"></div>
+        </ul>
+      </div>
+      <div class="right-column">
+        <div id="gameResults" class="results-container">
+          <h3>Game Results</h3>
+          <div id="resultsContent"></div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
 </body>

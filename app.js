@@ -105,8 +105,8 @@ function runGame() {
       }
   }
 
-  if (players.length === 0) {
-      alert("Please add at least one player first!");
+  if (players.length < 2) {
+      alert("Please add at least two players to start the game!");
       return;
   }
 
@@ -148,16 +148,14 @@ function startGame() {
   clearResults();
   
   const playerElements = document.getElementById('myUL').getElementsByTagName('li');
-  if (playerElements.length === 0) {
-      alert("Please add at least one player first!");
+  if (playerElements.length < 2) {
+      alert("Please add at least two players to start the game!");
       return;
   }
 
   // Start the game
   runGame();
 }
-
-
 
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
@@ -179,3 +177,4 @@ function newElement() {
   document.getElementById("myUL").appendChild(li);
   document.getElementById("myInput").value = "";
 }
+

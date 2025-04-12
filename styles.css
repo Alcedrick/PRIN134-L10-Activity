@@ -1,19 +1,66 @@
 * {
     box-sizing: border-box;
-  }
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+    background-image: url('https://cdn.britannica.com/19/233519-050-F0604A51/LeBron-James-Los-Angeles-Lakers-Staples-Center-2019.jpg');
+    background-size: cover;
+    background-position: center 0.1%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 0 0 40%;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 0 0 60%;
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-column,
+    .right-column {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+}
   
   ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
   }
   
   ul li {
     cursor: pointer;
     position: relative;
-    padding: 12px 8px 12px 40px;
+    padding: 12px 20px;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    margin-bottom: 5px;
+    border-radius: 4px;
   
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -30,12 +77,13 @@
   }
   
   
-  .header {
+.header {
     background-color: #f44336;
     padding: 30px 40px;
     color: white;
     text-align: center;
-  }
+    font-family: "Helvetica", "Arial", sans-serif;
+}
   
   .header:after {
     content: "";
@@ -43,39 +91,43 @@
     clear: both;
   }
   
-  input {
+.input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input {
     margin: 0;
     border: none;
-    border-radius: 0;
-    width: 75%;
+    border-radius: 4px 0 0 4px;
     padding: 10px;
-    float: left;
     font-size: 16px;
-  }
-  
-  .addBtn {
-    padding: 10px;
-    width: 25%;
+    flex: 1;
+}
+
+.addBtn {
+    padding: 10px 20px;
     background: #d9d9d9;
     color: #555;
-    float: left;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
-    border-radius: 0;
-  }
+    border-radius: 0 4px 4px 0;
+    white-space: nowrap;
+    border: none;
+}
   
   .addBtn:hover {
     background-color: #bbb;
   }
 
 .results-container {
-    margin: 20px auto;
     padding: 20px;
     background: #f8f9fa;
     border-radius: 5px;
-    max-width: 600px;
+    height: 100%;
 }
 
 .results-container h3 {
@@ -120,3 +172,5 @@
     background-color: #218838;
     transform: scale(1.05);
 }
+
+
